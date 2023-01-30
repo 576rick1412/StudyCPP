@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int index = 29;
+	int mutilenght = 9;
+
+	int line = 0;
+
+	for (int i = 1; i <= index; i += line)
+	{
+		for (int j = 1; j <= mutilenght; j++)
+		{
+			printf("%d * %d = %d\t", i, j, i * j);
+			for (int k = 1; k <= line; k++)
+			{
+				if (i + k > index) continue;	// 지정된 범위를 벗어나면 넘기기
+				printf("%d * %d = %d\t", i + k, j, (i + k) * j);
+			}
+			cout << endl;
+		}
+		cout << endl;
+		line++;
+	}
+
+	return 0;
+}
