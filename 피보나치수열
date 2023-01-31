@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	const int index = 10; // 줄 길이
+
+	int plus;
+	int num;
+	int temp;
+
+	for (int i = 0; i < index; i++)
+	{
+		plus = 0;
+		num = 1;
+
+		for (int j = 0; j <= i; j++)
+		{		
+			cout << num << ", ";
+
+			temp = num;
+			num += plus;
+			plus = temp;
+		}
+
+		cout << endl;
+	}
+
+	return 0;
+}
+
+
+/*
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+	int index = 0;			// 횡 길이	
+	const int startNum = 1;	// 시작 숫자
+	const int times = 10;	// 출력 횟수 ( 줄 길이 ) 
+
+	int arrNum[times] = { 0 };
+	arrNum[0] = startNum;
+
+	for (int i = 0; i <= index; i++)
+	{
+		for (int k = 0; k <= index; k++)
+		{
+			if (k >= 1) arrNum[k] = arrNum[k - 1];
+			if (k >= 2) arrNum[k] = arrNum[k - 2] + arrNum[k - 1];
+			cout << arrNum[k] << ", ";
+		}
+		cout << endl;
+		index++;
+
+		if (index >= times) return 0;
+	}
+}
+*/
