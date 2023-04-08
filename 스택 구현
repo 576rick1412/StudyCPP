@@ -1,0 +1,72 @@
+#include <iostream>
+
+using namespace std;
+
+struct stack
+{
+	int arr[1000];
+	int idx;
+
+	// 초기화
+	void init()
+	{
+		idx = -1;
+	}
+
+	// 가장 위에 데이터 넣기
+	void push(int x)	
+	{
+		arr[++idx] = x;
+	}
+
+	// 가장 위에있는 데이터 접근
+	int top()			
+	{
+		if (idx < 0)
+		{
+			return -1000;
+		}
+		else
+		{
+			return arr[idx];
+		}
+	}
+
+	// 가장 위에있는 데이터 삭제
+	void pop()
+	{
+		if (idx >= 0)
+		{
+			idx--;
+		}
+	}
+
+	// 데이터의 개수 반환
+	int size()			
+	{
+		return idx + 1;
+	}
+
+	// 비어있는지 여부 반환
+	bool empty()	
+	{
+		if (idx < 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+};
+
+
+
+int main()
+{
+	stack st;
+	st.init();
+
+
+}
