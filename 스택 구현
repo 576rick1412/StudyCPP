@@ -61,12 +61,37 @@ struct stack
 	}
 };
 
-
-
 int main()
 {
 	stack st;
 	st.init();
 
+	cout << "empty " << st.empty() << endl;
+	cout << "size " << st.size() << endl;
+	cout << endl;
 
+	st.push(10);
+	st.push(15);
+	st.push(20);
+
+	cout << "empty " << st.empty() << endl;
+	cout << "size " << st.size() << endl;
+	cout << endl;
+
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "top " << st.top() << endl;
+		st.pop();
+	}
+	cout << endl;
+
+	cout << "empty " << st.empty() << endl;
+	cout << "size " << st.size() << endl;
+	cout << endl;
+
+	st.push(50);
+	cout << "top " << st.top() << endl;
 }
+
+
+
